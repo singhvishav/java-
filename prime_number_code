@@ -1,0 +1,21 @@
+public class MyClass {
+    public static boolean Prime(int num){
+        if(num==1 ||  num==0){
+            return false;
+        }
+        for(int i=2;i<num;i++){
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String args[]) {
+      int num=10;
+      for(int i=1;i<num;i++){
+      if(Prime(i)){
+      System.out.print(i+" ");
+      }
+      }
+    }
+}
