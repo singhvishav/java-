@@ -1,0 +1,29 @@
+public class MyClass {
+    public static boolean valid(String str,int n){
+       str= str.toLowerCase();
+       StringBuilder b = new StringBuilder();
+       for(int i=0;i<n;i++){
+           if(Character.isDigit(str.charAt(i)) || Character.isLetter(str.charAt(i))){
+               b.append(str.charAt(i));
+           }
+       }
+       int num = b.length()-1;
+       for(int i=0;i<b.length();i++){
+           if(b.charAt(i)!=b.charAt(num-i)){
+               return false;
+           }
+       }
+       return true;
+       
+    }
+    public static void main(String args[]) {
+     String str = "aaaabbbbaaaa";
+     int n = str.length();
+     valid(str,n);
+        if(valid(str,n))
+          System.out.println("Sentence is palindrome");
+        else
+          System.out.println("Sentence is not" + " " +
+                                         "palindrome");
+    }
+}
