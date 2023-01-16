@@ -1,0 +1,23 @@
+public class MyClass {
+    public static void arm(int x){
+        int c=0,a;
+        int temp =x;
+        while(temp>0){
+            a=temp%10;
+            c=c+a*a*a;
+            temp = temp/10;
+        }
+         if(c==x){
+             System.out.print("arm");
+         }
+         else{
+         System.out.print(" NOt arm");
+         }
+        }
+    public static void main(String args[]) {
+      int x=154;
+      arm(x);
+      
+      
+    }
+}
